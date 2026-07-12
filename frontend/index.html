@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Feedback Form</h1>
+
+        <form id="feedbackForm">
+
+            <input type="text" id="name" placeholder="Enter Name" required>
+
+            <input type="email" id="email" placeholder="Enter Email" required>
+
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+            </select>
+
+            <textarea id="feedback" placeholder="Enter Feedback" required></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+        <p id="message"></p>
+        <h2>Submitted Feedback</h2>
+
+        <div id="feedbackList"></div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
