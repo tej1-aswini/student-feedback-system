@@ -1,108 +1,81 @@
-# Student Feedback System
+Student Feedback System
 
-## Project Description
+A full-stack web application that allows students to submit feedback and view submitted feedback records. The project uses a frontend interface, a Node.js/Express backend API, and a MySQL database hosted on Aiven.
 
-Student Feedback System is a web-based application that allows students to submit their feedback online. The submitted feedback is stored in a MySQL database and can be viewed through the application.
-
-## Technologies Used
+🚀 Live Demo
 
 Frontend:
-- HTML
-- CSS
-- JavaScript
 
-Backend:
-- Node.js
-- Express.js
+https://student-feedback-system-ih4z.onrender.com/
 
-Database:
-- MySQL
+Backend API:
 
-Tools:
-- VS Code
-- Git
-- GitHub
+https://student-feedback-backend-epcw.onrender.com
 
-## Features
+📌 Features
 
 - Student feedback submission form
-- Collects student name, email, course, and feedback
 - Stores feedback data in MySQL database
-- REST API integration between frontend and backend
-- Displays submitted feedback
-- Simple and user-friendly interface
+- Displays submitted feedback cards
+- REST API for handling feedback operations
+- Cloud database integration using Aiven MySQL
+- Backend deployment using Render
+- Frontend deployment using Render Static Site
 
-## Project Structure
+🛠️ Technologies Used
 
-student-feedback-system
+Frontend
 
-├── backend
-│   ├── routes
+- HTML5
+- CSS3
+- JavaScript
+
+Backend
+
+- Node.js
+- Express.js
+- MySQL2
+- CORS
+- dotenv
+
+Database
+
+- MySQL (Aiven Cloud)
+
+Deployment
+
+- GitHub
+- Render
+- Aiven
+
+📂 Project Structure
+
+student-feedback-system/
+│
+├── backend/
+│   ├── routes/
 │   │   └── feedback.js
 │   ├── db.js
 │   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── .env
 │
-├── frontend
+├── frontend/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
-├── screenshots
-│
 └── README.md
 
-## Database Details
+⚙️ Installation and Setup
 
-Database Name:
+1. Clone the repository
 
-student_feedback
+git clone YOUR_GITHUB_REPOSITORY_URL
 
-Table Name:
+2. Backend Setup
 
-feedback
-
-Table Columns:
-
-- id
-- name
-- email
-- course
-- feedback
-- created_at
-
-## API Endpoints
-
-### 1. Submit Feedback
-
-Method:
-POST
-
-Endpoint:
-
-/api/feedback
-
-Description:
-Stores student feedback into the MySQL database.
-
-
-### 2. View Feedback
-
-Method:
-GET
-
-Endpoint:
-
-/api/feedback
-
-Description:
-Retrieves all submitted feedback from the database.
-
-## How to Run the Project
-
-### Backend Setup
-
-Open terminal:
+Go to the backend folder:
 
 cd backend
 
@@ -110,27 +83,74 @@ Install dependencies:
 
 npm install
 
-Run server:
+Create a ".env" file:
 
-node server.js
+DB_HOST=your_database_host
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_NAME=defaultdb
+DB_PORT=18601
+
+Start the backend:
+
+npm start
 
 Backend runs on:
 
 http://localhost:5000
 
+3. Frontend Setup
 
-### Frontend Setup
+Open the "frontend/index.html" file using Live Server or a browser.
 
-Open:
+🗄️ Database Structure
 
-frontend/index.html
+Database table: "feedback"
 
-in a browser.
+Column| Type
+id| INT (Primary Key)
+name| VARCHAR(100)
+email| VARCHAR(100)
+message| TEXT
+created_at| TIMESTAMP
 
-## Output
+🔗 API Endpoints
 
-Students can submit feedback through the form. The feedback is stored in the MySQL database and displayed on the webpage.
+Get all feedback
 
-## Conclusion
+GET /api/feedback
 
-The Student Feedback System demonstrates full-stack web development using HTML, CSS, JavaScript, Node.js, Express.js, and MySQL. It includes frontend design, backend API development, database connectivity, and data handling.
+Submit feedback
+
+POST /api/feedback
+
+Request body:
+
+{
+  "name": "Student Name",
+  "email": "student@email.com",
+  "message": "Feedback message"
+}
+
+🌐 Deployment
+
+Backend
+
+- Deployed using Render Web Service
+- Connected to Aiven MySQL database
+
+Frontend
+
+- Deployed using Render Static Site
+
+🔒 Environment Variables
+
+Sensitive information such as database passwords are stored in environment variables and are not uploaded to GitHub.
+
+👩‍💻 Author
+
+Tejaswini
+
+📄 License
+
+This project is created for educational purposes.
