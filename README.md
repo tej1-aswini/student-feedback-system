@@ -147,10 +147,58 @@ Frontend
 
 Sensitive information such as database passwords are stored in environment variables and are not uploaded to GitHub.
 
-👩‍💻 Author
+---
 
+## vercel frontend url
+https://student-feedback-system-3w4oy7hx2-react9.vercel.app/
+
+## Deployment Process
+
+### Backend Deployment
+
+1. Backend code was pushed to GitHub.
+2. Node.js and Express.js application was deployed on Render.
+3. Environment variables were added in Render.
+4. Backend was connected with Aiven MySQL database.
+
+### Database Deployment
+
+1. MySQL database was created using Aiven Cloud.
+2. Database credentials were configured using environment variables.
+3. Backend successfully connected with the cloud database.
+
+### Frontend Deployment
+
+1. Frontend code was pushed to GitHub.
+2. Frontend was deployed using Vercel.
+3. API URLs were updated to connect with the deployed backend.
+
+---
+
+## Screenshots
+
+The repository contains screenshots of:
+
+- GitHub repository
+- Render deployment
+- Vercel deployment
+- Hosted application
+- Feedback submission working successfully
+
+---
+
+## Security Configuration
+
+- Database credentials are stored using environment variables.
+- `.env` files are excluded from GitHub.
+- Production settings are managed through cloud hosting platforms.
+
+---
+
+## Conclusion
+
+The Student Feedback System was successfully developed and deployed as a full-stack cloud-hosted application. This project demonstrates frontend development, backend API development, database integration, environment configuration, and real-world deployment practices.
+
+
+ Author
 Tejaswini
-
-📄 License
-
-This project is created for educational purposes.
