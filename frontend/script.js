@@ -10,7 +10,7 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e){
     };
 
 
-    fetch("http://localhost:5000/api/feedback", {
+    fetch("https://student-feedback-backend-epcw.onrender.com/api/feedback", {
 
         method: "POST",
 
@@ -45,7 +45,7 @@ document.getElementById("feedbackForm").addEventListener("submit", function(e){
 
 // Display all feedback
 
-fetch("http://localhost:5000/api/feedback")
+fetch("https://student-feedback-backend-epcw.onrender.com/api/feedback")
 
 .then(response => response.json())
 
